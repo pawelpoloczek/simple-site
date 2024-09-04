@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+html,
+body {
+    font-family: 'Lato', Arial, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: #333;
+    height: 100%;
+    background-color: #FFF;
+}
+
+a {
+    text-decoration: none;
+    color: #31bbfb;
+}
+
+h1 {
+    font-size: 34px;
+    margin: 24px 0 12px 0;
+}
+
+h2 {
+    font-size: 30px;
+    margin: 20px 0 10px 0;
+}
+
+h3 {
+    font-size: 26px;
+    margin: 16px 0 8px 0;
+}
+
+h4 {
+    font-size: 22px;
+    margin: 12px 0 6px 0;
+}
+
+ul, ol {
+    margin-left: 15px;
+}
+
+.main-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header {
+    height: 30px;
+    padding: 15px 0;
+    text-align: center;
+}
+
+
+header .left {
+    float: left;
+}
+
+header .right {
+    float: right;
+}
+
+header .right a {
+    color: #333;
+    padding: 0 5px;
+    font-size: 24px;
+}
+
+header .right a:last-child {
+    padding-right: 0;
+}
+
+header .right a:hover {
+    color: #31bbfb;
+}
+
+nav {
+    padding: 30px 0;
+    border-top: solid 2px #CAC7C7;
+    border-bottom: solid 2px #CAC7C7;
+    margin-bottom: 30px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    font-size: 24px;
+    padding: 10px 15px;
+    color: #333;
+}
+
+nav ul li a:hover {
+    color: #31bbfb;
+}
+
+footer {
+    padding: 30px 0;
+    border-top: solid 2px #CAC7C7;
+    margin-top: 30px;
+}
+
+footer .left {
+    float: left;
+}
+
+footer .right {
+    float: right;
+}

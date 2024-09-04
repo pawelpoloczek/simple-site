@@ -1,0 +1,39 @@
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 14 day"
+ExpiresByType text/html "access plus 1 seconds"
+ExpiresByType image/x-icon "access plus 2592000 seconds"
+ExpiresByType image/gif "access plus 2592000 seconds"
+ExpiresByType image/jpeg "access plus 2592000 seconds"
+ExpiresByType image/png "access plus 2592000 seconds"
+ExpiresByType text/css "access plus 604800 seconds"
+ExpiresByType text/x-javascript "access plus 604800 month"
+ExpiresByType text/javascript "access plus 604800 seconds"
+ExpiresByType application/javascript "access plus 604800 seconds"
+ExpiresByType application/x-javascript "access plus 604800 seconds"
+</IfModule>
+ 
+# BEGIN Turn ETags Off
+<ifModule mod_headers.c>
+  Header unset ETag
+</ifModule>
+FileETag None
+# END Turn ETags Off
+
+# Directory listing off
+Options -Indexes 
+
+# Rewrite Rules Engine
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^www.poloczek.me(.*) [NC]
+RewriteRule ^(.*)$ http://poloczek.me/$1 [R=301,L]
+
+## Remove .php extension
+#RewriteCond %{REQUEST_FILENAME}.php -f
+#RewriteRule !.*\.php$ %{REQUEST_FILENAME}.php [QSA,L]
+
+# Redirect all to index
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ /index.php [L,QSA]
