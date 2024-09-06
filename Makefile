@@ -1,7 +1,6 @@
 build:
-	docker build -t simple-site .
-run:
-	docker run -d -p 8080:80 --name simple-site-web simple-site
+	docker compose build
+start:
+	docker compose up -d
 stop:
-	docker stop simple-site-web
-	docker remove simple-site-web
+	docker compose down --remove-orphans

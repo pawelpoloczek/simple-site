@@ -1,3 +1,3 @@
 <main>
-    <h1>Strona w budowie</h1>
+    <h1>Strona główna</h1>
 </main>

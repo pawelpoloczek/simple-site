@@ -1,0 +1,15 @@
+services:
+    apache:
+        container_name: simple-site-apache
+        build:
+            context: '.'
+            dockerfile: './Dockerfile'
+        ports:
+            - "8080:80"
+        volumes:
+            - './src:/var/www/html'
+        networks:
+            - simple-site-web
+
+networks:
+    simple-site-web:
